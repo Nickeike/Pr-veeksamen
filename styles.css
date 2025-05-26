@@ -1,0 +1,80 @@
+/* Farger fra designet */
+:root {
+    --red: #E21F39;
+    --blue: #5CC9E3;
+    --black: #1D1717;
+    --gray: #D6C4C4;
+    --white: #FFFFFF;
+}
+
+/* Generelle stiler */
+body {
+    font-family: 'Acumin variable concept', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray);
+    color: var(--black);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.products {
+    padding: 2rem;
+    background-color: var(--white);
+}
+
+.product-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product img {
+    max-width: 100%;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+}
