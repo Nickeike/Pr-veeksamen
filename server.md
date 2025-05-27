@@ -72,7 +72,16 @@ Når du opnar **Dataset** for første gong, må du **lage ein Pool**.
    - Der det står 'optional' treng du ikkje å legge det inn – det er berre for lagring av loggfiler til ulike formål. I framtida kan det likevel vere lurt å legge til fleire diskar som er dedikert til spesifikke oppgåver, som lagring av systeminformasjon.
 ---
 
+## Lage eit Datasett.
+- Naviger til **Datasets**
+- klikk **Add Dataset**
+- visst du berre har ein Pool så vil den velge den automatisk. 
+- gi datasettet ditt eit navn (Uten mellomrom)
+- bruk Generic
+- Klikk **Save**
 
+## Testing av lagringdisker.
+Når du trykker inn på **Data Protection** så ser du at Scrub er satt opp automatisk. og her finnes det forkjellige måter. både med å koble seg til skyen(visst du har betalt) eller andre tester for Virtuelle maskiner. men visst du trenger berre fildeling. så er det lurt å sette opp S.M.A.R.T Test. då klikker du på **Add** ved sida av der det står **Periodic S.M.A.R.T Tasks** 
 
 ## Scrub-task
 
@@ -96,3 +105,15 @@ Når du opnar **Dataset** for første gong, må du **lage ein Pool**.
 - **Kort test**: Kvar veke, kl. 00.00.
 - **Lang test**: Kvar månad, kl. 03.00.
 - **Varsling ved feil**: Aktivert.
+
+### Laging av brukerer.
+
+- klikk inn på **Credentials** 
+- deretter så klikker du på **Users** 
+- deretter så klikker du på add.
+- så kan du skrive brukerens heile navn. login(username) blir lagd automatisk etter fulle navnet somregel, men du kan lage eit spesifikt eit for brukeren. passord må du lage manuelt inne på denne menyen. du kan skru av passord men då kan ikkje brukeren ha SMB Share muligheter, kobla seg til filserveren.(det står meir info inne på lag bruker menyen.) klikk på spørsmåltegnet.
+
+### Shares (Deling av fil)
+
+- ved sida av der det står Windows (SMB) Shares så er det ein knapp **add** klikk på den.
+- der står det path. velg den som du vil ha (/mnt/lagrepool/<din egenlagde fil.>)
