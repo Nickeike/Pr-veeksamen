@@ -4,6 +4,14 @@ deretter så tok eg minnepennen i ein pc/laptop og installerte TrueNAS Core.
 så kom det opp ein GUI som navigerte oss gjennom oppsettet av boot enhet.
 
 Installering:
+(NB! Mus/plate kommer ikkje til å funke under denne prossesen så du må bruke tastaturet.)
+
+Viktige knapper du må bruke.
+
+Piltaster: for å navigere deg opp og ned i GUI menyen. Ser ut "krokodillegap: opp, ned, høgre, venstre"
+Enter: knappen for å gå videre til neste steg. Ser ut: "bøyd pil som går mot venstre"
+space: for å velge ting inni menyen feks boot disk/device. Ser ut: "største knappen på tastaturet (avlang knapp)"
+
 1. velg install/upgrade
 2. choose destination media (helst velg disken med minst lagringsplass, heile disken blir brukt)
 3. trykk på "Yes" (NB! det vil slette alt data på lagringsenheten du har velgt)
