@@ -25,7 +25,7 @@ Deretter dukka **TrueNAS GUI** opp, og installasjonen kunne starte.
 6. Restart PC-en (serveren) og kopla ut installeringsenheten (USB med ISO-fil).
 
 ### Etter installasjon
-Om du har ein **Ethernet-kabel** kopla til, skal systemet automatisk få ei **IP-adresse** og bli tilgjengeleg via ein nettlesar (**Google Chrome, Brave eller Edge**). **IP-Adressa** står på skjermen til serveren din
+Om du har ein **Ethernet-kabel** kopla til, skal systemet automatisk få ei **IP-adresse** og bli tilgjengeleg via ein nettlesar (**Google Chrome, Brave eller Edge**). **IP-adressa** står på skjermen til serveren din.
 
 Når du opnar **TrueNAS GUI**, skriv du inn **brukarnamn** (**root**) og **passordet** du oppretta under installasjonen.
 
@@ -59,9 +59,9 @@ Når dette er gjort, skal alt fungere som forventa.
 
 🔗 [Gibibytes til Gigabytes-kalkulator](https://www.gbmb.org/gib-to-gb)
 
-Når du opnar **Dataset** for første gong, må du **lage ein Pool**. 
+Når du opnar **Datasets** for første gong, må du **lage ein Pool**. 
 
-### **Lage ein Pool:**
+### **Lage ein Pool**
 1. **Vel eit namn** for poolen (utan mellomrom).
 2. **Vel lagringsmetode**:
    - **Mirroring (RAID 1)** – Beskyttar mot diskfeil, men dobler ikkje lagringskapasiteten.
@@ -69,25 +69,32 @@ Når du opnar **Dataset** for første gong, må du **lage ein Pool**.
    - **RAID 4** – Dedikert paritetsdisk gir betre feiltoleranse enn RAID 0.
    - **RAID 5** – Spreier paritet over fleire diskar, balansert mellom lagring og feiltoleranse.
    - **RAID 6** – Spreier paritet over **to** diskar, slik at systemet kan tåle opptil **to feilande diskar**.
-   - Der det står 'optional' treng du ikkje å legge det inn – det er berre for lagring av loggfiler til ulike formål. I framtida kan det likevel vere lurt å legge til fleire diskar som er dedikert til spesifikke oppgåver, som lagring av systeminformasjon.
+   - Der det står *optional*, treng du ikkje å legge det inn – det er berre for lagring av loggfiler til ulike formål. I framtida kan det likevel vere lurt å legge til fleire diskar som er dedikert til spesifikke oppgåver, som lagring av systeminformasjon.
+
 ---
 
-## Lage eit Datasett.
-- Naviger til **Datasets**
-- klikk **Add Dataset**
-- visst du berre har ein Pool så vil den velge den automatisk. 
-- gi datasettet ditt eit navn (Uten mellomrom)
-- bruk Generic
-- Klikk **Save**
+## **Lage eit Datasett**
+1. Naviger til **Datasets**.
+2. Klikk **Add Dataset**.
+3. Viss du berre har ein Pool, vil den velje denne automatisk.
+4. Gi datasettet ditt eit namn (utan mellomrom).
+5. Vel **Generic**.
+6. Klikk **Save**.
 
-## Testing av lagringdisker.
-Når du trykker inn på **Data Protection** så ser du at Scrub er satt opp automatisk. og her finnes det forkjellige måter. både med å koble seg til skyen(visst du har betalt) eller andre tester for Virtuelle maskiner. men visst du trenger berre fildeling. så er det lurt å sette opp S.M.A.R.T Test. då klikker du på **Add** ved sida av der det står **Periodic S.M.A.R.T Tasks** 
+---
 
-## Scrub-task
+## **Testing av lagringsdiskar**
+Når du trykker inn på **Data Protection**, ser du at **Scrub** er sett opp automatisk. Her kan du også koble til skytjenester (om du har betalt for det) eller sette opp testar for virtuelle maskiner. 
 
-**Scrubbing** hjelper med å oppdage og rette feil i ZFS-filsystemet. 
+Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testar**:
+1. Klikk på **Add** ved sida av der det står **Periodic S.M.A.R.T. Tasks**.
 
- **Anbefalte innstillingar**:
+---
+
+## **Scrub-task**
+**Scrubbing** hjelper med å oppdage og rette feil i ZFS-filsystemet. Det fungerer som ein helsesjekk for lagringssystemet og kan automatisk reparere feil.
+
+✅ **Anbefalte innstillingar**:
 - **Scrub-kjøringar**: Aktivert.
 - **Frekvens**: Månadleg.
 - **Automatisk reparasjon**: På.
@@ -95,29 +102,35 @@ Når du trykker inn på **Data Protection** så ser du at Scrub er satt opp auto
 
 ---
 
-## S.M.A.R.T.-task
+## **S.M.A.R.T.-task**
+**S.M.A.R.T.-testing** gir tidleg varsling om diskfeil og overvakar helsa til lagringsdiskane.
 
-**S.M.A.R.T.-testing** gir tidleg varsling om diskfeil.
-
- **Anbefalte innstillingar**:
+✅ **Anbefalte innstillingar**:
 - **Frekvens**: Aktivert for alle lagringsdiskar.
 - **Automatisk testing**: Kvar veke.
 - **Kort test**: Kvar veke, kl. 00.00.
 - **Lang test**: Kvar månad, kl. 03.00.
 - **Varsling ved feil**: Aktivert.
 
-### Laging av brukerer.
+---
 
-- klikk inn på **Credentials** 
-- deretter så klikker du på **Users** 
-- deretter så klikker du på add.
-- så kan du skrive brukerens heile navn. login(username) blir lagd automatisk etter fulle navnet somregel, men du kan lage eit spesifikt eit for brukeren. passord må du lage manuelt inne på denne menyen. du kan skru av passord men då kan ikkje brukeren ha SMB Share muligheter, kobla seg til filserveren.(det står meir info inne på lag bruker menyen.) klikk på spørsmåltegnet.
+## **Laging av brukarar**
+1. Klikk inn på **Credentials**.
+2. Vel **Users**.
+3. Klikk **Add**.
+4. Skriv inn brukarens fulle namn. *Login (username) blir automatisk generert etter namnet, men du kan tilpasse det*.
+5. Opprett eit passord manuelt.
+6. Dersom du skrur av passord, vil brukaren ikkje kunne bruke **SMB Share** for å koble seg til filserveren. *For meir info, klikk på spørsmålsteiknet i menyen*.
 
-### Shares (Deling av fil)
+---
 
-- ved sida av der det står Windows (SMB) Shares så er det ein knapp **add** klikk på den.
-- der står det path. velg den som du vil ha (/mnt/lagrepool/<din-egenlagde-datasett.>)
-- navnet velge du sjølv
-- **Purpose** kan vere der den er
-- klikk på **Save**
-- visst den spørr deg om å restarte SMB så gjer det for å oppdatere infoen
+## **Shares (Deling av filer)**
+1. Gå til **Windows (SMB) Shares** og klikk på **Add**.
+2. Vel **Path**, og vel datasettet du vil dele (*Eksempel: `/mnt/lagrepool/<din-egenlagde-datasett>`*).
+3. Gi delinga eit namn.
+4. **Purpose** kan stå som standard.
+5. Klikk **Save**.
+6. Viss systemet ber deg om å **restarte SMB**, så gjer det for å oppdatere innstillingane.
+
+---
+
