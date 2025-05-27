@@ -23,4 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Nullstill skjemaet
         contactForm.reset();
     });
+
+    // Legg til funksjon for nattmodus
+    const darkModeToggle = document.getElementById('dark-mode-toggle'); // Hent knappen for nattmodus
+    const body = document.body; // Hent body-elementet
+    const logo = document.querySelector('.logo img'); // Hent logoen
+
+    darkModeToggle.addEventListener('click', () => {
+        // Bytt mellom klassen 'dark-mode' på body
+        body.classList.toggle('dark-mode');
+
+        // Oppdater logoen basert på nattmodus
+        if (body.classList.contains('dark-mode')) {
+            logo.src = 'Logoer/logo kvit.png'; // Bytt til kvit logo
+            darkModeToggle.textContent = 'Lysmodus'; // Oppdater teksten på knappen
+        } else {
+            logo.src = 'Logoer/logo rød.png'; // Bytt tilbake til raud logo
+            darkModeToggle.textContent = 'Nattmodus'; // Oppdater teksten på knappen
+        }
+    });
 });

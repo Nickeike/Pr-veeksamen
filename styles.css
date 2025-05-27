@@ -1,135 +1,145 @@
-/* Farger fra det grafiske designet */
+/* Fargar frå det grafiske designet */
 :root {
-    --red: #E21F39;
-    --blue: #5CC9E3;
-    --black: #1D1717;
-    --gray: #D6C4C4;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
+    --red: #E21F39; /* Raud farge brukt i designet */
+    --blue: #5CC9E3; /* Blå farge brukt i designet */
+    --black: #000000; /* Svart farge brukt i designet */
+    --gray: #D6C4C4; /* Grå farge brukt i designet */
+    --white: #FFFFFF; /* Kvit farge brukt i designet */
+    --light-gray: #F5F5F5; /* Lys grå farge brukt i designet */
 }
 
-/* Generelle stiler */
+/* Generelle stilar */
 body {
-    font-family: 'Acumin variable concept', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--light-gray);
-    color: var(--black);
-    line-height: 1.6;
+    font-family: 'Acumin variable concept', Arial, sans-serif; /* Standard font */
+    margin: 0; /* Fjern standard margin */
+    padding: 0; /* Fjern standard padding */
+    background-color: var(--light-gray); /* Lys bakgrunn som standard */
+    color: var(--black); /* Svart tekst som standard */
+    line-height: 1.6; /* God linjeavstand for lesbarheit */
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Bruk flexbox for layout */
+    justify-content: space-between; /* Fordel innhaldet jamt */
+    align-items: center; /* Sentrer innhaldet vertikalt */
+    padding: 1rem 2rem; /* Legg til padding for luft rundt */
+    background-color: var(--white); /* Kvitt som standard bakgrunn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til ein svak skugge */
 }
 
 .logo img {
-    max-height: 50px;
+    max-height: 200px; /* Maks høgde for logoen */
+    width: auto; /* Behald proporsjonane */
 }
 
 .nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Fjern punkt frå lista */
+    display: flex; /* Bruk flexbox for layout */
+    gap: 1.5rem; /* Legg til mellomrom mellom lenkene */
+    margin: 0; /* Fjern standard margin */
+    padding: 0; /* Fjern standard padding */
 }
 
 .nav a {
-    color: var(--black);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: var(--black); /* Svart tekst for lenker */
+    text-decoration: none; /* Fjern understrek */
+    font-weight: bold; /* Gjer teksten feit */
+    transition: color 0.3s ease; /* Legg til ein overgangseffekt */
 }
 
 .nav a:hover {
-    color: var(--red);
+    color: var(--red); /* Endre fargen til raud ved hover */
 }
 
+/* Hero-seksjonen */
 .hero {
-    text-align: center;
-    padding: 6rem 2rem;
-    background: linear-gradient(135deg, var(--blue), var(--red));
-    color: var(--white);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    text-align: center; /* Sentrer teksten */
+    padding: 6rem 2rem; /* Legg til luft rundt */
+    background: linear-gradient(135deg, var(--blue), var(--red)); /* Gradientbakgrunn */
+    color: var(--white); /* Kvitt som tekstfarge */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Klipp til ein skrå kant */
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3rem; /* Stor overskrift */
+    margin-bottom: 1rem; /* Legg til mellomrom under */
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Mindre tekst for avsnitt */
+    margin-bottom: 2rem; /* Legg til meir mellomrom under */
 }
 
+/* Knapp for å utforske produkt */
 .cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--white);
-    color: var(--red);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Gjer knappen inline */
+    padding: 0.75rem 1.5rem; /* Legg til luft inni knappen */
+    background-color: var(--white); /* Kvitt som bakgrunn */
+    color: var(--red); /* Raud tekst */
+    text-decoration: none; /* Fjern understrek */
+    font-weight: bold; /* Gjer teksten feit */
+    border-radius: 25px; /* Runde hjørne */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Legg til overgangseffekt */
 }
 
 .cta-button:hover {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--red); /* Raud bakgrunn ved hover */
+    color: var(--white); /* Kvitt som tekstfarge ved hover */
 }
 
+/* Produkter-seksjonen */
 .products {
-    padding: 4rem 2rem;
-    background-color: var(--white);
+    padding: 4rem 2rem; /* Legg til luft rundt seksjonen */
+    background-color: var(--white); /* Kvitt som standard bakgrunn */
 }
 
 .products h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: var(--red);
+    text-align: center; /* Sentrer overskrifta */
+    margin-bottom: 2rem; /* Legg til mellomrom under */
+    font-size: 2rem; /* Stor overskrift */
+    color: var(--red); /* Raud tekst for overskrifta */
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    display: grid; /* Bruk grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamisk kolonneoppsett */
+    gap: 2rem; /* Legg til mellomrom mellom produkta */
 }
 
 .product {
-    background-color: var(--light-gray);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: var(--light-gray); /* Lys grå bakgrunn for produktkort */
+    border-radius: 10px; /* Runde hjørne */
+    overflow: hidden; /* Skjul innhald som går utanfor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Legg til ein svak skugge */
+    transition: transform 0.3s ease; /* Legg til ein overgangseffekt */
 }
 
 .product:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Løft produktkortet ved hover */
 }
 
 .product img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%; /* Gjer bildet 100% breitt */
+    height: auto; /* Behald proporsjonane */
+    display: block; /* Fjern mellomrom under bildet */
 }
 
 .product h3 {
-    margin: 1rem;
-    font-size: 1.2rem;
-    color: var(--black);
+    margin: 1rem; /* Legg til luft rundt overskrifta */
+    font-size: 1.2rem; /* Mindre overskrift */
+    color: var(--black); /* Sett produktnamn til svart */
 }
 
 .product p {
-    margin: 0 1rem 1rem;
-    font-size: 1rem;
-    color: var(--red);
+    margin: 0 1rem 1rem; /* Legg til luft rundt teksten */
+    font-size: 1rem; /* Standard tekststorleik */
+    color: var(--black); /* Sett pristeksten til svart */
+}
+
+/* Overstyr nattmodus for produktene */
+body.dark-mode .product h3,
+body.dark-mode .product p {
+    color: var(--black); /* Sørg for at teksten forblir svart i nattmodus */
 }
 
 .contact {
@@ -187,4 +197,180 @@ footer {
     background-color: var(--black);
     color: var(--white);
     font-size: 0.9rem;
+}
+
+.about {
+    text-align: center; /* Sentrer teksten */
+    padding: 4rem 2rem; /* Legg til padding for bedre spacing */
+    background-color: var(--white); /* Valgfritt: Endre bakgrunnsfarge */
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: var(--red); /* Fremhev tittelen */
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: var(--white); /* Sett teksten til kvit */
+    max-width: 800px; /* Begrens bredden på teksten */
+    margin: 0 auto; /* Sentrer teksten horisontalt */
+}
+
+/* Nattmodus */
+body.dark-mode {
+    background-color: var(--black); /* Sett bakgrunnen til svart */
+    color: var(--white); /* Endre standard tekstfarge til kvit */
+}
+
+/* Gjør alle headers kvite i nattmodus */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--white); /* Endre fargen på alle headers til kvit */
+}
+
+/* Gjør alle lenker kvite i nattmodus */
+body.dark-mode a {
+    color: var(--white); /* Endre lenkefargen til kvit */
+    text-decoration: none; /* Fjern understrek om ønskjeleg */
+}
+
+body.dark-mode a:hover {
+    color: var(--red); /* Endre lenkefargen ved hover til raud */
+}
+
+header {
+    background-color: var(--white); /* Standard bakgrunn for header */
+    color: var(--black); /* Standard tekstfarge for header */
+}
+
+body.dark-mode header {
+    background-color: var(--black); /* Sett header-bakgrunnen til svart */
+    color: var(--white); /* Endre tekstfargen til kvit */
+}
+
+footer {
+    background-color: var(--black); /* Standard bakgrunn for footer */
+    color: var(--white); /* Standard tekstfarge for footer */
+}
+
+body.dark-mode footer {
+    background-color: var(--black); /* Sett footer-bakgrunnen til svart */
+    color: var(--white); /* Endre tekstfargen til kvit */
+}
+
+/* Logo for nattmodus */
+.logo img.dark-mode {
+    content: url('Logoer/logo kvit.png'); /* Bytt til kvit logo */
+}
+
+/* Nattmodus for kontaktskjema */
+body.dark-mode .contact {
+    background-color: var(--black); /* Sett bakgrunnen til svart */
+    color: var(--white); /* Endre tekstfargen til kvit */
+}
+
+body.dark-mode .contact h2 {
+    color: var(--white); /* Endre tittelfargen til kvit */
+}
+
+body.dark-mode .contact label {
+    color: var(--white); /* Endre fargen på etiketter til kvit */
+}
+
+body.dark-mode .contact input,
+body.dark-mode .contact textarea {
+    background-color: var(--gray); /* Sett bakgrunnen til grå */
+    color: var(--black); /* Endre tekstfargen til svart */
+    border: 1px solid var(--white); /* Endre kantfargen til kvit */
+}
+
+body.dark-mode .contact button {
+    background-color: var(--white); /* Sett bakgrunnen til kvit */
+    color: var(--black); /* Endre tekstfargen til svart */
+}
+
+body.dark-mode .contact button:hover {
+    background-color: var(--gray); /* Endre bakgrunnen ved hover */
+    color: var(--black); /* Behold svart tekst */
+}
+
+/* Sørg for at cta-button alltid er kvit */
+.cta-button {
+    background-color: var(--white); /* Rød bakgrunn */
+    color: var(--red); /* Rød tekst */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--red); /* Rød bakgrunn ved hover */
+    color: var(--white); /* Kvit tekst ved hover */
+}
+
+/* Sørg for at cta-button forblir kvit i nattmodus */
+body.dark-mode .cta-button {
+    background-color: var(--red); /* Rød bakgrunn */
+    color: var(--white); /* Kvit tekst */
+}
+
+/* Sett bakgrunnen til #products-seksjonen til svart i nattmodus */
+body.dark-mode .products {
+    background-color: var(--black); /* Sett bakgrunnen til svart */
+    color: var(--white); /* Endre tekstfargen til kvit */
+}
+
+/* Sett bakgrunnen til #about-seksjonen til svart i nattmodus */
+body.dark-mode .about {
+    background-color: var(--black); /* Sett bakgrunnen til svart */
+    color: var(--white); /* Endre tekstfargen til kvit */
+}
+
+body.dark-mode .about h2 {
+    color: var(--white); /* Endre tittelfargen til kvit */
+}
+
+body.dark-mode .about p {
+    color: var(--white); /* Sørg for at teksten også er kvit */
+}
+
+/* Stil for mørkmodus-knappen */
+.dark-mode-toggle {
+    padding: 0.75rem 1.5rem; /* Legg til luft inni knappen */
+    background-color: var(--red); /* Raud bakgrunn */
+    color: var(--white); /* Kvit tekst */
+    border: none; /* Fjern kantlinje */
+    border-radius: 25px; /* Runde hjørne */
+    font-size: 1rem; /* Standard tekststorleik */
+    font-weight: bold; /* Gjer teksten feit */
+    cursor: pointer; /* Endre musepeikaren til ein hand */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Legg til overgangseffekt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Legg til ein svak skugge */
+}
+
+/* Hover-effekt i lysmodus */
+.dark-mode-toggle:hover {
+    background-color: var(--black); /* Endre bakgrunnen til svart ved hover */
+    color: var(--white); /* Behald kvit tekst */
+    transform: scale(1.05); /* Gjer knappen litt større ved hover */
+}
+
+/* Hover-effekt i mørk modus */
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: var(--white); /* Endre bakgrunnen til kvit ved hover */
+    color: var(--black); /* Endre teksten til svart */
+    transform: scale(1.05); /* Gjer knappen litt større ved hover */
+}
+
+/* Klikkeffekt */
+.dark-mode-toggle:active {
+    transform: scale(0.95); /* Gjer knappen litt mindre ved klikk */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduser skuggen ved klikk */
 }
