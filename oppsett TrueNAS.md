@@ -1,8 +1,8 @@
 # Oppsett av TrueNAS Server
 
- installer [**TrueNAS Core ISO fil**](https://www.truenas.com/download-truenas-core/)
+ ### installer [**TrueNAS Core ISO fil**](https://www.truenas.com/download-truenas-core/)
 
- Du treng ikkje å lage konto hos dei. Bla litt ned til du ser: "No, thank you, I have already signed up."
+ #### Du treng ikkje å lage konto hos dei. Bla litt ned til du ser: "No, thank you, I have already signed up."
 
 Eg starta med å installere **ISO-filen til TrueNAS Core** på ein minnepenn ved hjelp av [**Balena Etcher**](https://etcher.balena.io/). Deretter sette eg minnepennen i ein PC/laptop som skulle brukast som server.
 
@@ -129,13 +129,44 @@ Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testa
 ---
 
 ## **Shares (Deling av filer)**
+
+### 1. Oppsett for enkelt brukar
 1. Gå til **Windows (SMB) Shares** og klikk på **Add**.
 2. Vel **Path**, og vel datasettet du vil dele (*Eksempel: `/mnt/lagrepool/<din-egenlagde-datasett>`*).
 3. Gi delinga eit namn.
 4. **Purpose** kan stå som standard.
 5. Klikk **Save**.
 6. Viss systemet ber deg om å **restarte SMB**, så gjer det for å oppdatere innstillingane.
+7. Dersom det dukkar opp **Configure ACL (Access Control List)** med meldinga:  
+   *"Do you want to configure the ACL?"*, trykk **Configure**.
+8. Du kjem då til ein meny som viser kven som skal ha tilgang til denne fila. **Root** er standard på **Owner** og **Group**, men du kan skifte det til ein annan brukar.
+9. Trykk på sjekkboksane **Apply Owner** og **Apply Group**.
+10. No ser du at du er inne i **Datasets**-sida. Dersom du ser på **Permissions**, vil du sjå at din valde brukar er "eigaren" av fila.
 
+---
+
+### **Dersom du vil at fila skal vere privat**
+1. Inne i **Datasets**, under **Permissions**, klikk **Edit**.
+2. I den mørkare boksen (*Access Control List*), finn **User Obj - root**, **Group Obj - root**, og **Other**. Trykk på **Other**.
+3. Klikk av **Read** og **Execute** (dette hindrar at andre kan lese eller køyre innhaldet).
+4. Klikk på **Save Access Control List** og lagre endringane.
+
+---
+
+### **Dersom du vil at fleire spesifikke brukarar skal ha tilgang til fila**
+1. Inne i **Permissions**, klikk **Edit**.
+2. Klikk deretter på **Add Item**.
+3. No vil du sjå ein ny **Mask**-post. Denne lar deg legge til fleire brukarar.
+4. Trykk på **Add Item** to gonger til.
+5. Klikk på ein av dei nye **Mask**-postane.
+6. Under menyen **Access Control Entry**, finn feltet **Who***.
+7. Trykk på den svarte boksen og vel **User**.
+8. Vel ein brukar (**User**) som skal få tilgang til fila.
+9. Gi brukaren tilgangsrettar etter behov: **Read, Write, Execute**.
+10. Vel ein ny **Mask** og klikk på den.
+11. Trykk på den svarte boksen og vel **User** igjen.
+12. Vel ein ny brukar (**User**) som skal få tilgang.
+13. Gi brukaren tilgangsrettar: **Read, Write, Execute**.
 ---
 
 Har du spørsmål? ta kontakt på [e-post](mailto:nickeike@outlook.com) eller ring 919 95 753
