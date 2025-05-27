@@ -9,7 +9,7 @@ Installering:
 3. trykk på "Yes" (NB! det vil slette alt data på lagringsenheten du har velgt)
 4. Lag root passord. (brukernavnet er root.)
 5. boot mode(TrueNAS kan bruke både BIOS metoden eller UEFI. Visst enheten er meir moderne så bruker du UEFI. visst den er eldre så bruker du BIOS.)
-6. retart pcen og koble ut installeringsenheten(usb med ISO fil)
+6. retart pcen og koble ut installeringsenheten(usb med ISO fil. koble ut usb enheten mens PC-en er av)
 
 visst du har kobla til ein ethernet kabel så skal den få ip adresse med ein gang og koble seg opp til på ein nettsøker(Google, Brave og Edge)
 
