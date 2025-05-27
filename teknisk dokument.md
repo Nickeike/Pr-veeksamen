@@ -1,4 +1,4 @@
-# Teknisk dokumentasjon – Nordic Geek Nettside
+# Teknisk dokumentasjon - Nordic Geek Nettside
 
 ## 1. Introduksjon
 Denne dokumentasjonen beskriver utviklinga av nettsida for **Nordic Geek AS**, som er laga for å selje fem ulike DnD-inspirerte t-skjorter. Nettsida er bygd med **HTML, CSS og JavaScript**, med ein responsiv design og implementert **mørk modus**.
