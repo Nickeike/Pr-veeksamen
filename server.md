@@ -1,34 +1,63 @@
-Oppsett av TrueNAS Server:
-Eg starta med å installere ein ISO fil på minnepenn med Balena Etcher. 
-deretter så tok eg minnepennen i ein pc/laptop og installerte TrueNAS Core.
-så kom det opp ein GUI som navigerte oss gjennom oppsettet av boot enhet.
+# Oppsett av TrueNAS Server
 
-Installering:
-(NB! Mus/plate kommer ikkje til å funke under denne prossesen så du må bruke tastaturet.)
+Eg starta med å installere ein ISO-fil på ein minnepenn ved hjelp av **Balena Etcher**. Deretter sette eg minnepennen i ein PC/laptop og installerte **TrueNAS Core**. Under installasjonen dukka det opp eit GUI som guida oss gjennom oppsettet av boot-enheten.
 
-Viktige knapper du må bruke.
+## Installering
 
-Piltaster: for å navigere deg opp, ned og til side i GUI menyen. Ser ut "krokodillegap: opp, ned, høgre, venstre"
-Enter: knappen for å gå videre til neste steg. Ser ut: "bøyd pil som går mot venstre"
-space: for å velge ting inni menyen feks boot disk/device. Ser ut: "største knappen på tastaturet (avlang knapp)"
+**NB! Mus/plate kjem ikkje til å fungere under denne prosessen, så du må bruke tastaturet.**
 
-1. velg install/upgrade
-2. choose destination media (helst velg disken med minst lagringsplass, heile disken blir brukt)
-3. trykk på "Yes" (NB! det vil slette alt data på lagringsenheten du har velgt)
-4. Lag root passord. (brukernavnet er root.)
-5. boot mode(TrueNAS kan bruke både BIOS metoden eller UEFI. Visst enheten er meir moderne så bruker du UEFI. visst den er eldre så bruker du BIOS.)
-6. retart pcen og koble ut installeringsenheten(usb med ISO fil. koble ut usb enheten mens PC-en er av)
+### Viktige tastar du må bruke
+- **Piltaster**: Brukast for å navigere opp, ned og til sides i GUI-menyen.
+- **Enter**: Knappen for å gå vidare til neste steg.
+- **Space**: Brukast for å velje alternativ i menyen, t.d. boot-disk/device.
 
-visst du har kobla til ein ethernet kabel så skal den få ip adresse med ein gang og koble seg opp til på ein nettsøker(Google, Brave og Edge)
+### Installasjonsprosess
+1. Vel **Install/Upgrade**.
+2. Vel **destination media** (helst den disken med minst lagringsplass – heile disken blir brukt).
+3. Trykk **Yes** (**NB!** Dette vil slette alt data på lagringsenheten du har vald).
+4. **Lag root-passord** (brukernamnet er **root**).
+5. Vel **boot mode** (TrueNAS kan bruke både **BIOS** eller **UEFI**. Vel **UEFI** dersom enheten er moderne, og **BIOS** dersom den er eldre).
+6. Restart PC-en og koble ut installeringsenheten (USB med ISO-fil).
 
-då kommer du til ein GUI som heiter TrueNAS med liten skrift som det står core
+### Etter installasjon
+Om du har ein **Ethernet-kabel** tilkobla, skal systemet automatisk få ei IP-adresse og kunne bli tilgjengeleg via ein nettlesar (**Google Chrome, Brave eller Edge**).
 
-der skriver du inn på brukernavn root. og passordet er det du skreiv på installeringsprosessen (se 4. på installeringsprossessen)
+Når du opnar TrueNAS GUI, skriv du inn **brukarnamn** (**root**) og **passordet** du oppretta under installasjonen.
 
-då kommer du til ein meny med spesifikasjoner av kva enheter du har som for eksempel. prossesorenheten din og Minnelagring (RAM) på.
+## Oppgradering av TrueNAS
+Det kan vere lurt å oppgradere systemet til den nyaste versjonen (**Fangtooth**). 
 
-det som er lurt er å oppgradere systemet til den nyeste versjonen (fangtooth). det går ikkje an å oppgradere direkte fra core til fangtooth fra min erfaring. eg misstenker at det er fordi core versjonen og scale versjonen har forskjellige OS. TrueNAS Core er basert på FreeBSD og 
-TrueNAS Scale er basert på GNU/Linux. 
+**NB!** Du kan ikkje oppgradere direkte frå **Core** til **Fangtooth**, fordi Core og Scale har forskjellige operativsystem:
+- **TrueNAS Core** er basert på **FreeBSD**.
+- **TrueNAS Scale** er basert på **GNU/Linux**.
 
-då må du oppgradere til Cobia 23.10 for å så oppgradere til fangtooth 25.04  og då skal alt funke der ifra.
+### Oppgraderingsprosess:
+1. **Oppgrader til Cobia 23.10**.
+2. **Deretter oppgrader til Fangtooth 25.04**.
 
+Når dette er gjort, skal alt fungere som forventa.
+
+## Lagringsoppsett og konfigurasjon
+Du har konfigurert systemet med **mirroring-oppsett**, som gir god databeskyttelse. Mirroring (**RAID1/ZFS speiling**) betyr at data vert lagra identisk på fleire diskar, slik at du har redundans viss éin disk skulle feile.
+
+### Dataset-informasjon
+Datasetene i TrueNAS GUI inkluderer:
+- **lagrepool**: *2.61 GiB brukt / 896.64 GiB tilgjengeleg* (Utan kryptering)
+- **eiger**: *240.19 MiB brukt / 499.77 GiB tilgjengeleg* (Utan kryptering)
+- **felles**: *240.26 MiB brukt / 350.64 GiB tilgjengeleg* (Utan kryptering)
+
+### Scrub-task
+For å sikre data-integritet i ZFS, har systemet ein **scrub-task** som skannar og verifiserer blokkene i lagringspoolen. Dette hjelper med å oppdage eventuelle bit-flipping feil og gjenopprette data frå speilde eller paritetsdiskar.
+
+- **Scrub-kjøringar**: Aktivert
+- **Frekvens**: Månadleg
+- **Automatisk reparasjon**: På
+- **Varsling ved feil**: Aktivert
+
+### S.M.A.R.T.-task
+Systemet har **S.M.A.R.T.-testing** aktivert for å overvake diskhelse og oppdage potensielle feil før dei fører til kritiske problem.
+
+- **Frekvens**: Aktivert for alle lagringsdiskar
+- **Automatisk testing**: Kvar veke 
+- **Kort og lang testing**: Konfigurert for ulike intervallar
+- **Varsling ved feil**: Aktivert for proaktiv feilsøking
