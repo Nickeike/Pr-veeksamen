@@ -30,5 +30,5 @@ då kommer du til ein meny med spesifikasjoner av kva enheter du har som for eks
 det som er lurt er å oppgradere systemet til den nyeste versjonen (fangtooth). det går ikkje an å oppgradere direkte fra core til fangtooth fra min erfaring. eg misstenker at det er fordi core versjonen og scale versjonen har forskjellige OS. TrueNAS Core er basert på FreeBSD og 
 TrueNAS Scale er basert på GNU/Linux. 
 
-då må du oppgradere til Cobia 23.10 for å så oppgradere til fangtooth 25.04 
+då må du oppgradere til Cobia 23.10 for å så oppgradere til fangtooth 25.04  og då skal alt funke der ifra.
 
