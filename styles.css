@@ -3,7 +3,7 @@
     --red: #E21F39; /* Raud farge brukt i designet */
     --blue: #5CC9E3; /* Blå farge brukt i designet */
     --black: #000000; /* Svart farge brukt i designet */
-    --gray: #c5c5c5; /* Grå farge brukt i designet */
+    --gray: #e2e2e2; /* Grå farge brukt i designet */
     --white: #ffffff; /* Kvit farge brukt i designet */
     --light-gray: #F5F5F5; /* Lys grå farge brukt i designet */
 }
@@ -13,12 +13,12 @@ body {
     font-family: 'Acumin variable concept', Arial, sans-serif; /* Standard font */
     margin: 0; /* Fjern standard margin */
     padding: 0; /* Fjern standard padding */
-    background-color: var(--gray); /* Lys bakgrunn som standard */
+    background-color: var(--white); /* Lys bakgrunn som standard */
     color: var(--black); /* Svart tekst som standard */
     line-height: 1.6; /* God linjeavstand for lesbarheit */
 }
 
-header {
+.header {
     display: flex; /* Bruk flexbox for layout */
     justify-content: space-between; /* Fordel innhaldet jamt */
     align-items: center; /* Sentrer innhaldet vertikalt */
@@ -107,7 +107,7 @@ header {
 }
 
 .product {
-    background-color: var(--light-gray); /* Lys grå bakgrunn for produktkort */
+    background-color: var(--gray); /* Lys grå bakgrunn for produktkort */
     border-radius: 10px; /* Runde hjørne */
     overflow: hidden; /* Skjul innhald som går utanfor */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Legg til ein svak skugge */
@@ -191,11 +191,11 @@ body.dark-mode .product p {
     background-color: var(--black);
 }
 
-footer {
+.footer {
     text-align: center;
     padding: 2rem;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--light-gray);
+    color: var(--black);
     font-size: 0.9rem;
 }
 
@@ -213,7 +213,7 @@ footer {
 
 .about p {
     font-size: 1.2rem;
-    color: var(--white); /* Sett teksten til kvit */
+    color: var(--red); /* Sett teksten til kvit */
     max-width: 800px; /* Begrens bredden på teksten */
     margin: 0 auto; /* Sentrer teksten horisontalt */
 }
