@@ -1,6 +1,10 @@
 # Oppsett av TrueNAS Server
 
-Eg starta med å installere ein ISO-fil på ein minnepenn ved hjelp av **Balena Etcher**. Deretter sette eg minnepennen i ein PC/laptop og installerte **TrueNAS Core**. Under installasjonen dukka det opp eit GUI som guida oss gjennom oppsettet av boot-enheten.
+Eg starta med å installere ein ISO-fil på ein minnepenn ved hjelp av **Balena Etcher**. Deretter sette eg minnepennen i ein PC/laptop 
+eg måtte då gå inn på bios på PC-en som skulle vere serveren, sjekke at secureboot var av, flytta usb enheten til første prioritet, lagre og avslutt.
+
+deretter så dukka det opp **TrueNAS**. sin GUI opp og då kunne me installere
+
 
 ## Installering
 
