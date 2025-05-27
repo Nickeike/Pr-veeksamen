@@ -69,8 +69,10 @@ Når du opnar **Dataset** for første gong, må du **lage ein Pool**.
    - **RAID 4** – Dedikert paritetsdisk gir betre feiltoleranse enn RAID 0.
    - **RAID 5** – Spreier paritet over fleire diskar, balansert mellom lagring og feiltoleranse.
    - **RAID 6** – Spreier paritet over **to** diskar, slik at systemet kan tåle opptil **to feilande diskar**.
-
+   - Der det står 'optional' treng du ikkje å legge det inn – det er berre for lagring av loggfiler til ulike formål. I framtida kan det likevel vere lurt å legge til fleire diskar som er dedikert til spesifikke oppgåver, som lagring av systeminformasjon.
 ---
+
+
 
 ## Scrub-task
 
