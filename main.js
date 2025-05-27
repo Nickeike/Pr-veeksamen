@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`Melding: ${message}`);
 
         // Vis ei enkel melding til brukaren
-        alert('Takk for meldinga! Vi vil kontakte deg snart.');
+        alert('Takk for meldingen! Vi vil kontakte deg snart.');
         
         // Nullstill skjemaet
         contactForm.reset();
