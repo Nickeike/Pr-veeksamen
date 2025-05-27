@@ -1,1 +1,1 @@
-# Pr-veeksamen
+# Prøveeksamen
