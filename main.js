@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             logo.src = 'Logoer/logo kvit.png'; // Bytt til kvit logo
             darkModeToggle.textContent = 'Lysmodus'; // Oppdater teksten på knappen
         } else {
-            logo.src = 'Logoer/logo rød.png'; // Bytt tilbake til raud logo
+            logo.src = 'Logoer/logo rød.png'; // Bytt tilbake til rød logo
             darkModeToggle.textContent = 'Nattmodus'; // Oppdater teksten på knappen
         }
     });
