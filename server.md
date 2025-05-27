@@ -94,7 +94,7 @@ Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testa
 ## **Scrub-task**
 **Scrubbing** hjelper med å oppdage og rette feil i ZFS-filsystemet. Det fungerer som ein helsesjekk for lagringssystemet og kan automatisk reparere feil.
 
-✅ **Anbefalte innstillingar**:
+ **Anbefalte innstillingar**:
 - **Scrub-kjøringar**: Aktivert.
 - **Frekvens**: Månadleg.
 - **Automatisk reparasjon**: På.
@@ -105,7 +105,7 @@ Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testa
 ## **S.M.A.R.T.-task**
 **S.M.A.R.T.-testing** gir tidleg varsling om diskfeil og overvakar helsa til lagringsdiskane.
 
-✅ **Anbefalte innstillingar**:
+ **Anbefalte innstillingar**:
 - **Frekvens**: Aktivert for alle lagringsdiskar.
 - **Automatisk testing**: Kvar veke.
 - **Kort test**: Kvar veke, kl. 00.00.
