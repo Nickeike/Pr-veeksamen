@@ -54,6 +54,8 @@ Gibibytes til Gigabytes
 
 **1000 GiB = 1073.741824 GB**
 
+https://www.gbmb.org/gib-to-gb
+
 Når du trykker deg inn på **Dataset** for første gang så ser du at du må lage ein **Pool** det skal du gjer. først så må du lage eit navn for din **Pool** det kan heite kva som helst så lenge det ikkje er mellomrom der. deretter så skal du velge kva type lagringsmetode som skal bli brukt til den Pool-en visst du har to lagringsenheter(SSD, HDD, USB) på same størrelse så kan du sette dei opp til Mirroring. visst dei er på forskjellige størrelser eller du har berre ein. så må du sette dei på stripe eller bruke mindre av den største(500GiB kobinert med 250GiB då brukes berre 250GiB av den 500Gib disken.) 
 
 ### Mirroring
@@ -61,7 +63,7 @@ Når du trykker deg inn på **Dataset** for første gang så ser du at du må la
 - visst du har to 500GiB disker så blir det berre fortsat 500GiB. siden infoen blir kopiert på begge.
 
 ### Stripe
-- visst du setter diskene dine opp til stripe så brukes begge diskene dine som lagringsplass. dette gir deg 
+- visst du setter diskene dine opp til stripe så brukes begge diskene dine som lagringsplass. visst du har to 500GiB lagringsdisker, så vil dette gi deg 1000GiB med lagring. 
  
 ### Scrub-task
 For å sikre data-integritet i ZFS, har systemet ein **scrub-task** som skannar og verifiserer blokkene i lagringspoolen. Dette hjelper med å oppdage eventuelle bit-flipping feil og gjenopprette data frå speilde eller paritetsdiskar.
