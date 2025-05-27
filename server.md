@@ -58,16 +58,20 @@ https://www.gbmb.org/gib-to-gb
 
 Når du trykker deg inn på **Dataset** for første gang så ser du at du må lage ein **Pool** det skal du gjer. først så må du lage eit navn for din **Pool** det kan heite kva som helst så lenge det ikkje er mellomrom der. deretter så skal du velge kva type lagringsmetode som skal bli brukt til den Pool-en visst du har to lagringsenheter(SSD, HDD, USB) på same størrelse så kan du sette dei opp til Mirroring. visst dei er på forskjellige størrelser eller du har berre ein. så må du sette dei på stripe eller bruke mindre av den største(500GiB kobinert med 250GiB då brukes berre 250GiB av den 500Gib disken.) 
 
-### Mirroring
+### Mirroring (RAID 1)
 - visst den eine disken forsvinner eller blir ødelagt, så kan du bruke den andre disken og sette inn ein ny ein uten at info/lagring blir ødelagt eller korrupt. dermed er den meir redudant.
 - visst du har to 500GiB disker så blir det berre fortsat 500GiB. siden infoen blir kopiert på begge.
 
-### Stripe
-- visst du setter diskene dine opp til stripe så brukes begge diskene dine som lagringsplass. visst du har to 500GiB lagringsdisker, så vil dette gi deg 1000GiB med lagring. 
+### Stripe (RAID 0)
+- visst du setter diskene dine opp til stripe så brukes begge diskene dine som lagringsplass. visst du har to 500GiB lagringsdisker, så vil dette gi deg 1000GiB med lagring. du vil få meir lagringsplass, men konsenkvensene er at visst ein av dine lagringsenheter forsvinner eller blir ødelagde, så kommer ingenting til å fungere(meir plass, ingen redudans.)
+
+### RAID 2-9 
+  Ein annen metode for å bruke diskene meir effektivt på med å dele dataen i fleire lagringsdisker så visst ein feile og du erstatte den så hente den data fra dei andre diskene og får infoen. visst du har 8 lagringsenheter og du har RAID 4 løsning, så kan 4 disker feile og serveren virke fint 
  
 ### Scrub-task
 For å sikre data-integritet i ZFS, har systemet ein **scrub-task** som skannar og verifiserer blokkene i lagringspoolen. Dette hjelper med å oppdage eventuelle bit-flipping feil og gjenopprette data frå speilde eller paritetsdiskar.
 
+(anbefalte innstillinger)
 - **Scrub-kjøringar**: Aktivert
 - **Frekvens**: Månadleg
 - **Automatisk reparasjon**: På
@@ -78,5 +82,5 @@ Systemet har **S.M.A.R.T.-testing** aktivert for å overvake diskhelse og oppdag
 
 - **Frekvens**: Aktivert for alle lagringsdiskar
 - **Automatisk testing**: Kvar veke 
-- **Kort og lang testing**: Konfigurert for ulike intervallar
+- **Kort og lang testing**: Konfigurert for ulike intervallar (Kort, kvar veke. Lang, kvar måned: På TrueNAS så kan ikkje du ta kort test og lang test på samme tid på dagen, så du må sette Lang testing på 03.00 og kort ca 00.00 )
 - **Varsling ved feil**: Aktivert for proaktiv feilsøking
