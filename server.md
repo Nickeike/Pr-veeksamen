@@ -28,4 +28,4 @@ då kommer du til ein GUI som heiter TrueNAS med liten skrift som det står core
 
 der skriver du inn på brukernavn root. og passordet er det du skreiv på installeringsprosessen (se 4. på installeringsprossessen)
 
-då kommer du til ein meny med spesifikasjoner 
+då kommer du til ein meny med spesifikasjoner av kva enheter du har som for eksempel. prossesorenheten din og Minnelagring (RAM) på kor 
