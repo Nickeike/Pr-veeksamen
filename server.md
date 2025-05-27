@@ -76,7 +76,7 @@ Når du opnar **Dataset** for første gong, må du **lage ein Pool**.
 
 **Scrubbing** hjelper med å oppdage og rette feil i ZFS-filsystemet. 
 
-✅ **Anbefalte innstillingar**:
+ **Anbefalte innstillingar**:
 - **Scrub-kjøringar**: Aktivert.
 - **Frekvens**: Månadleg.
 - **Automatisk reparasjon**: På.
@@ -88,7 +88,7 @@ Når du opnar **Dataset** for første gong, må du **lage ein Pool**.
 
 **S.M.A.R.T.-testing** gir tidleg varsling om diskfeil.
 
-✅ **Anbefalte innstillingar**:
+ **Anbefalte innstillingar**:
 - **Frekvens**: Aktivert for alle lagringsdiskar.
 - **Automatisk testing**: Kvar veke.
 - **Kort test**: Kvar veke, kl. 00.00.
