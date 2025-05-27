@@ -51,12 +51,12 @@ Denne dokumentasjonen beskriver utviklinga av nettsida for **Nordic Geek AS**, s
 Nettsida nyttar **CSS-variablar** for enkel fargeadministrasjon:
 ```css
 :root {
-    --red: #E21F39;
-    --blue: #5CC9E3;
-    --black: #000000;
-    --gray: #D6C4C4;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
+    --red: #E21F39; 
+    --blue: #5CC9E3; 
+    --black: #000000; 
+    --gray: #e2e2e2; 
+    --white: #ffffff; 
+    --light-gray: #F5F5F5; 
 }
 ```
 
