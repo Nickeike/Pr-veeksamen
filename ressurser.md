@@ -1,0 +1,1 @@
+Eg har brukt copilot på github for inspirasjon for nettsida si oppsett
