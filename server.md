@@ -8,7 +8,7 @@ Installering:
 
 Viktige knapper du må bruke.
 
-Piltaster: for å navigere deg opp og ned i GUI menyen. Ser ut "krokodillegap: opp, ned, høgre, venstre"
+Piltaster: for å navigere deg opp, ned og til side i GUI menyen. Ser ut "krokodillegap: opp, ned, høgre, venstre"
 Enter: knappen for å gå videre til neste steg. Ser ut: "bøyd pil som går mot venstre"
 space: for å velge ting inni menyen feks boot disk/device. Ser ut: "største knappen på tastaturet (avlang knapp)"
 
