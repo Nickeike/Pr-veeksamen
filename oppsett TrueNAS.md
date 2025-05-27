@@ -1,8 +1,8 @@
 # Oppsett av TrueNAS Server
 
-> installer [**TrueNAS Core ISO fil**](https://www.truenas.com/download-truenas-core/)
+ installer [**TrueNAS Core ISO fil**](https://www.truenas.com/download-truenas-core/)
 
-> Du treng ikkje å lage konto hos dei. Bla litt ned til du ser: "No, thank you, I have already signed up."
+ Du treng ikkje å lage konto hos dei. Bla litt ned til du ser: "No, thank you, I have already signed up."
 
 Eg starta med å installere **ISO-filen til TrueNAS Core** på ein minnepenn ved hjelp av [**Balena Etcher**](https://etcher.balena.io/). Deretter sette eg minnepennen i ein PC/laptop som skulle brukast som server.
 
