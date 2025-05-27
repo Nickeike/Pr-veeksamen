@@ -132,7 +132,7 @@ Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testa
 
 ### 1. Oppsett for enkelt brukar
 1. Gå til **Windows (SMB) Shares** og klikk på **Add**.
-2. Vel **Path**, og vel datasettet du vil dele (*Eksempel: `/mnt/lagrepool/<din-egenlagde-datasett>`*).
+2. Vel **Path**, og vel datasettet du vil dele (*Eksempel: `/mnt/din-pool/din-egenlagde-datasett`*).
 3. Gi delinga eit namn.
 4. **Purpose** kan stå som standard.
 5. Klikk **Save**.
