@@ -117,3 +117,7 @@ Når du trykker inn på **Data Protection** så ser du at Scrub er satt opp auto
 
 - ved sida av der det står Windows (SMB) Shares så er det ein knapp **add** klikk på den.
 - der står det path. velg den som du vil ha (/mnt/lagrepool/<din-egenlagde-datasett.>)
+- navnet velge du sjølv
+- **Purpose** kan vere der den er
+- klikk på **Save**
+- visst den spørr deg om å restarte SMB så gjer det for å oppdatere infoen
