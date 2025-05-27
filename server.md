@@ -21,12 +21,13 @@ space: for å velge ting inni menyen feks boot disk/device. Ser ut: "største kn
 
 visst du har kobla til ein ethernet kabel så skal den få ip adresse med ein gang og koble seg opp til på ein nettsøker(Google, Brave og Edge)
 
-visst ikkje så må du sette IP adresse på serveren din manuelt
-
-
 då kommer du til ein GUI som heiter TrueNAS med liten skrift som det står core
 
 der skriver du inn på brukernavn root. og passordet er det du skreiv på installeringsprosessen (se 4. på installeringsprossessen)
 
 då kommer du til ein meny med spesifikasjoner av kva enheter du har som for eksempel. prossesorenheten din og Minnelagring (RAM) på.
 
+det som er lurt er å oppgradere systemet til den nyeste versjonen (fangtooth). det går ikkje an å oppgradere direkte fra core til fangtooth fra min erfaring. eg misstenker at det er fordi core versjonen og scale versjonen har forskjellige OS. TrueNAS Core er basert på FreeBSD og TrueNAS Scale er basert på GNU/Linux. 
+(eg fant ingen kjelder som bekrefte dette, men det funker for meg)
+
+då må du oppgradere til Cobia 23.10 for å så oppgradere til fangtooth. 
