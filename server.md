@@ -44,7 +44,24 @@ Det kan vere lurt å oppgradere systemet til den nyaste versjonen (**Fangtooth**
 Når dette er gjort, skal alt fungere som forventa.
 
 ## Lagringsoppsett og konfigurasjon
-Når du trykker deg inn på **Dataset** for første gang så ser du at du må lage ein **Pool** det skal du gjer. først så må du lage eit navn for din **Pool** det kan heite kva som helst så lenge det ikkje er mellomrom der. deretter så skal 
+Gibibytes til Gigabytes
+
+**1 GiB = 1.073741824 GB** 
+
+**250 GiB = 268.435456 GB**
+
+**500 GiB = 536.870912 GB**
+
+**1000 GiB = 1073.741824 GB**
+
+Når du trykker deg inn på **Dataset** for første gang så ser du at du må lage ein **Pool** det skal du gjer. først så må du lage eit navn for din **Pool** det kan heite kva som helst så lenge det ikkje er mellomrom der. deretter så skal du velge kva type lagringsmetode som skal bli brukt til den Pool-en visst du har to lagringsenheter(SSD, HDD, USB) på same størrelse så kan du sette dei opp til Mirroring. visst dei er på forskjellige størrelser eller du har berre ein. så må du sette dei på stripe eller bruke mindre av den største(500GiB kobinert med 250GiB då brukes berre 250GiB av den 500Gib disken.) 
+
+### Mirroring
+- visst den eine disken forsvinner eller blir ødelagt, så kan du bruke den andre disken og sette inn ein ny ein uten at info/lagring blir ødelagt eller korrupt. dermed er den meir redudant.
+- visst du har to 500GiB disker så blir det berre fortsat 500GiB. siden infoen blir kopiert på begge.
+
+### Stripe
+- visst du setter diskene dine opp til stripe så brukes begge diskene dine som lagringsplass. dette gir deg 
  
 ### Scrub-task
 For å sikre data-integritet i ZFS, har systemet ein **scrub-task** som skannar og verifiserer blokkene i lagringspoolen. Dette hjelper med å oppdage eventuelle bit-flipping feil og gjenopprette data frå speilde eller paritetsdiskar.
