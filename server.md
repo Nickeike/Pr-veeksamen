@@ -10,6 +10,8 @@ Eg starta med å installere ein ISO-fil på ein minnepenn ved hjelp av **Balena 
 - **Piltaster**: Brukast for å navigere opp, ned og til sides i GUI-menyen.
 - **Enter**: Knappen for å gå vidare til neste steg.
 - **Space**: Brukast for å velje alternativ i menyen, t.d. boot-disk/device.
+ 
+- Det er lurt å ha ein ethernet kabel kobla til routeren eller port frå PC-en(serveren) din
 
 ### Installasjonsprosess
 1. Vel **Install/Upgrade**.
@@ -17,7 +19,7 @@ Eg starta med å installere ein ISO-fil på ein minnepenn ved hjelp av **Balena 
 3. Trykk **Yes** (**NB!** Dette vil slette alt data på lagringsenheten du har vald).
 4. **Lag root-passord** (brukernamnet er **root**).
 5. Vel **boot mode** (TrueNAS kan bruke både **BIOS** eller **UEFI**. Vel **UEFI** dersom enheten er moderne, og **BIOS** dersom den er eldre).
-6. Restart PC-en og koble ut installeringsenheten (USB med ISO-fil).
+6. Restart PC-en(serveren) og koble ut installeringsenheten (USB med ISO-fil).
 
 ### Etter installasjon
 Om du har ein **Ethernet-kabel** tilkobla, skal systemet automatisk få ei IP-adresse og kunne bli tilgjengeleg via ein nettlesar (**Google Chrome, Brave eller Edge**).
@@ -38,14 +40,8 @@ Det kan vere lurt å oppgradere systemet til den nyaste versjonen (**Fangtooth**
 Når dette er gjort, skal alt fungere som forventa.
 
 ## Lagringsoppsett og konfigurasjon
-Du har konfigurert systemet med **mirroring-oppsett**, som gir god databeskyttelse. Mirroring (**RAID1/ZFS speiling**) betyr at data vert lagra identisk på fleire diskar, slik at du har redundans viss éin disk skulle feile.
-
-### Dataset-informasjon
-Datasetene i TrueNAS GUI inkluderer:
-- **lagrepool**: *2.61 GiB brukt / 896.64 GiB tilgjengeleg* (Utan kryptering)
-- **eiger**: *240.19 MiB brukt / 499.77 GiB tilgjengeleg* (Utan kryptering)
-- **felles**: *240.26 MiB brukt / 350.64 GiB tilgjengeleg* (Utan kryptering)
-
+Når du trykker deg inn på **Dataset** for første gang så ser du at du må lage ein **Pool** det skal du gjer. først så må du lage eit navn for din **Pool** det kan heite kva som helst så lenge det ikkje er mellomrom der. deretter så skal 
+ 
 ### Scrub-task
 For å sikre data-integritet i ZFS, har systemet ein **scrub-task** som skannar og verifiserer blokkene i lagringspoolen. Dette hjelper med å oppdage eventuelle bit-flipping feil og gjenopprette data frå speilde eller paritetsdiskar.
 
