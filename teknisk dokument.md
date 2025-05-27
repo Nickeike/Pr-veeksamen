@@ -38,11 +38,11 @@ Denne dokumentasjonen beskriver utviklinga av nettsida for **Nordic Geek AS**, s
 ```
 
 ### HTML-struktur
-Nettsida er bygga opp med semantiske HTML-element:
-- `<header>` – Inneheld logo, navigasjon og nattmodus-knapp.
-- `<main>` – Hovudinnhald med seksjonar for introduksjon, produkter, om oss og kontakt.
-- `<footer>` – Copyright-informasjon.
-
+```html
+<header> <!-- Inneheld logo, navigasjon og nattmodus-knapp --> </header>
+<main> <!-- Hovudinnhald med seksjonar for introduksjon, produkter, om oss og kontakt --> </main>
+<footer> <!-- Copyright-informasjon --> </footer>
+```
 ---
 
 ## 4. CSS-styling
@@ -102,8 +102,7 @@ contactForm.addEventListener('submit', (event) => {
 ```
 - Viser ein melding ved innsending:
 ```js
-alert('Takk for meldinga! Vi vil kontakte deg snart.');
+alert('Takk for meldingen! Vi vil kontakte deg snart.');
 ```
-
 
 ---
