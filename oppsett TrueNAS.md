@@ -164,9 +164,10 @@ Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testa
 8. Vel ein brukar (**User**) som skal få tilgang til fila.
 9. Gi brukaren tilgangsrettar etter behov: **Read, Write, Execute**.
 10. Vel ein ny **Mask** og klikk på den.
-11. Trykk på den svarte boksen og vel **User** igjen.
-12. Vel ein ny brukar (**User**) som skal få tilgang.
+11. Trykk på den svarte boksen og vel **Group**
+12. Vel ein gruppe (**Group**) som skal få tilgang.
 13. Gi brukaren tilgangsrettar: **Read, Write, Execute**.
+
 ---
 
 Har du spørsmål? ta kontakt på [e-post](mailto:nickeike@outlook.com) eller ring 919 95 753
