@@ -124,7 +124,7 @@ Dersom du berre treng **fildeling**, er det lurt å sette opp **S.M.A.R.T.-testa
 3. Klikk **Add**.
 4. Skriv inn brukarens fulle namn. *Login (username) blir automatisk generert etter namnet, men du kan tilpasse det*.
 5. Opprett eit passord manuelt.
-6. Dersom du skrur av passord, vil brukaren ikkje kunne bruke **SMB Share** for å koble seg til filserveren. *For meir info, klikk på spørsmålsteiknet i menyen*.
+6. Dersom du skrur av passord, vil brukaren ikkje kunne bruke **SMB Share** for å koble seg til filserveren. *For meir info, klikk på spørsmålsteiknet i TrueNAS menyen*.
 
 ---
 
