@@ -31,3 +31,4 @@ det som er lurt er å oppgradere systemet til den nyeste versjonen (fangtooth). 
 (eg fant ingen kjelder som bekrefte dette, men det funker for meg)
 
 då må du oppgradere til Cobia 23.10 for å så oppgradere til fangtooth 25.04 
+
