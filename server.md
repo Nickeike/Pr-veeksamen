@@ -25,7 +25,7 @@ Deretter dukka **TrueNAS GUI** opp, og installasjonen kunne starte.
 6. Restart PC-en (serveren) og kopla ut installeringsenheten (USB med ISO-fil).
 
 ### Etter installasjon
-Om du har ein **Ethernet-kabel** kopla til, skal systemet automatisk få ei **IP-adresse** og bli tilgjengeleg via ein nettlesar (**Google Chrome, Brave eller Edge**).
+Om du har ein **Ethernet-kabel** kopla til, skal systemet automatisk få ei **IP-adresse** og bli tilgjengeleg via ein nettlesar (**Google Chrome, Brave eller Edge**). **IP-Adressa** står på skjermen til serveren din
 
 Når du opnar **TrueNAS GUI**, skriv du inn **brukarnamn** (**root**) og **passordet** du oppretta under installasjonen.
 
