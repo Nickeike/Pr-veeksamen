@@ -116,4 +116,4 @@ Når du trykker inn på **Data Protection** så ser du at Scrub er satt opp auto
 ### Shares (Deling av fil)
 
 - ved sida av der det står Windows (SMB) Shares så er det ein knapp **add** klikk på den.
-- der står det path. velg den som du vil ha (/mnt/lagrepool/<din egenlagde fil.>)
+- der står det path. velg den som du vil ha (/mnt/lagrepool/<din-egenlagde-datasett.>)
