@@ -3,8 +3,8 @@
     --red: #E21F39; /* Raud farge brukt i designet */
     --blue: #5CC9E3; /* Blå farge brukt i designet */
     --black: #000000; /* Svart farge brukt i designet */
-    --gray: #D6C4C4; /* Grå farge brukt i designet */
-    --white: #FFFFFF; /* Kvit farge brukt i designet */
+    --gray: #c5c5c5; /* Grå farge brukt i designet */
+    --white: #ffffff; /* Kvit farge brukt i designet */
     --light-gray: #F5F5F5; /* Lys grå farge brukt i designet */
 }
 
@@ -13,7 +13,7 @@ body {
     font-family: 'Acumin variable concept', Arial, sans-serif; /* Standard font */
     margin: 0; /* Fjern standard margin */
     padding: 0; /* Fjern standard padding */
-    background-color: var(--light-gray); /* Lys bakgrunn som standard */
+    background-color: var(--gray); /* Lys bakgrunn som standard */
     color: var(--black); /* Svart tekst som standard */
     line-height: 1.6; /* God linjeavstand for lesbarheit */
 }
@@ -23,7 +23,7 @@ header {
     justify-content: space-between; /* Fordel innhaldet jamt */
     align-items: center; /* Sentrer innhaldet vertikalt */
     padding: 1rem 2rem; /* Legg til padding for luft rundt */
-    background-color: var(--white); /* Kvitt som standard bakgrunn */
+    background-color: var(--light-gray); /* Kvitt som standard bakgrunn */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legg til ein svak skugge */
 }
 
@@ -302,22 +302,23 @@ body.dark-mode .contact button:hover {
 
 /* Sørg for at cta-button alltid er kvit */
 .cta-button {
-    background-color: var(--white); /* Rød bakgrunn */
-    color: var(--red); /* Rød tekst */
+    background-color: var(--red); /* Rød bakgrunn */
+    color: var(--white); /* Rød tekst */
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px; 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+ 
 .cta-button:hover {
-    background-color: var(--red); /* Rød bakgrunn ved hover */
-    color: var(--white); /* Kvit tekst ved hover */
+    background-color: var(--red); /* Rød bakgrunn */
+    color: var(--white); /* Kvit tekst */
 }
+
 
 /* Sørg for at cta-button forblir kvit i nattmodus */
 body.dark-mode .cta-button {
-    background-color: var(--red); /* Rød bakgrunn */
+    background-color: var(--black); /* Rød bakgrunn */
     color: var(--white); /* Kvit tekst */
 }
 

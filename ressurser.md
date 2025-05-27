@@ -3,3 +3,6 @@
 * Eg har brukt TrueNAS sin instalasjonsside https://www.truenas.com/download-truenas-core/
 * Eg brukte og TrueNAS installasjonsguide for oppsett TrueNAS.md https://www.truenas.com/blog/how-to-install-truenas-core/
 
+kopkcdd
+
+|||
