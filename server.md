@@ -1,5 +1,8 @@
 # Oppsett av TrueNAS Server
 
+For å installere TrueNAS Core så må du gå inn på denne lenka 
+https://www.truenas.com/download-truenas-core/
+
 Eg starta med å installere **ISO-filen til TrueNAS Core** på ein minnepenn ved hjelp av **Balena Etcher**. Deretter sette eg minnepennen i ein PC/laptop som skulle brukast som server.
 
 Eg måtte då gå inn i **BIOS** på PC-en, sjekke at **Secure Boot** var **av**, flytte **USB-enheten** til første prioritet, lagre endringane og avslutte BIOS.
