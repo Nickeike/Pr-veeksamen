@@ -25,13 +25,16 @@ Denne dokumentasjonen beskriver utviklinga av nettsida for **Nordic Geek AS**, s
 |   |-- logo kvit.png
 |   |-- logo tekst rød
 |   |--logo tekst kvit
-|-- /tsjorter
+|-- /t-skjorter
 |   |-- tsjorte kvit.png
 |   |-- tskjorteblå.png
 |   |-- tskjorteorange.png
 |   |-- tskjortegul.png
 |   |-- tskjortemørk.png
-|-- 
+|-- oppsett TrueNAS.md
+|-- README.md
+|-- resurser.md
+|-- teknisk dokument.md
 ```
 
 ### HTML-struktur
