@@ -23,14 +23,16 @@ Denne dokumentasjonen beskriver utviklinga av nettsida for **Nordic Geek AS**, s
 |-- /Logoer
 |   |-- logo rød.png
 |   |-- logo kvit.png
+|   |-- logo tekst rød
+|   |--logo tekst kvit
 |-- /tsjorter
 |   |-- tsjorte kvit.png
 |   |-- tskjorteblå.png
-|   |-- tskjorteoransj.png
+|   |-- tskjorteorange.png
 |   |-- tskjortegul.png
 |   |-- tskjortemørk.png
-|
-
+|-- 
+```
 
 ### HTML-struktur
 Nettsida er bygga opp med semantiske HTML-element:
